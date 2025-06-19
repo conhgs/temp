@@ -1,0 +1,7 @@
+Service-Bus msg  ─► email_ingestion.main  ─► ProcessEmailUseCase.execute
+                                         │
+      BlobStorageEmailRepository.fetch_html()   (gets HTML)
+                                         ▼
+                        GeminiExtractor.extract_json(html)   ← HERE
+                                         ▼
+                        ExtractionResult  (typed domain object)
