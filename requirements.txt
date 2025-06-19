@@ -1,0 +1,5 @@
+azure-functions==1.*
+azure-servicebus==7.*
+azure-storage-blob==12.*
+google-cloud-aiplatform==1.*
+dataclasses-json==0.6.4
