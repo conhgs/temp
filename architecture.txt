@@ -1,0 +1,27 @@
+workbench-ei/                 # repo root
+│   host.json
+│   local.settings.json        # dev-time secrets
+│   requirements.txt
+│   function_app.py            # Azure Functions entry-point
+│
+└── src/
+    ├── core/                  # pure domain layer
+    │   ├── __init__.py
+    │   ├── models.py
+    │   ├── ports.py
+    │   └── use_cases.py
+    │
+    ├── infrastructure/        # concrete adapters
+    │   ├── __init__.py
+    │   ├── azure/
+    │   │     ├── __init__.py
+    │   │     ├── blob_utils.py
+    │   │     └── sb_parser.py
+    │   └── vertex/
+    │         ├── __init__.py
+    │         └── gemini_llm.py
+    │
+    └── presentation/          # Azure-Function glue
+        ├── __init__.py
+        ├── blueprints.py
+        └── email_ingestion.py
